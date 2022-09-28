@@ -21,7 +21,7 @@ public class TipCalculator {
 
         // User Input Request
         System.out.print("Bill Amount: $");
-        totalBill = s.nextInt();
+        totalBill = s.nextDouble();
         System.out.print("Tip Percentage (as a whole number without % sign): ");
         tipPercentage = s.nextInt();
         System.out.print("Number of People: ");
