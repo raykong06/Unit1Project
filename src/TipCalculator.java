@@ -17,5 +17,26 @@ public class TipCalculator {
         double totalBillRounded;
         double totalBillAndTip;
         double totalPerPerson;
+
+        // User Input Request
+        System.out.print("Bill Amount: $");
+        totalBill = s.nextInt();
+        System.out.print("Tip Percentage (as a whole number without % sign): ");
+        tipPercentage = s.nextInt();
+        System.out.print("Number of People: ");
+        numberOfPeople = s.nextInt();
+
+        // Calculations
+            // Tip
+        tipPercentageConverted = tipPercentage * 0.01;
+        totalTip = tipPercentageConverted * totalBill;
+                // round the total tip up to nearest cent
+        totalTipPerPerson = Math.ceil((totalTip / numberOfPeople) * 100);
+                // cast as integer to remove anything after two decimals
+        totalTipPerPerson = (int)totalTipPerPerson;
+                // reset total tip to double with cents
+        totalTipPerPerson = totalTipPerPerson / 100.00;
+        totalTip = numberOfPeople * totalTipPerPerson;
+
     }
 }
