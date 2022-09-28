@@ -14,7 +14,6 @@ public class TipCalculator {
         double totalTip;
         double totalTipPerPerson;
         double totalBillPerPerson;
-        double totalBillRounded;
         double totalBillAndTip;
         double totalPerPerson;
 
@@ -37,7 +36,7 @@ public class TipCalculator {
                 // reset total tip to double with cents
         totalTipPerPerson = totalTipPerPerson / 100.00;
 
-        totalTip = numberOfPeople * totalTipPerPerson;
+        totalTip = Math.round(numberOfPeople * totalTipPerPerson * 1000) / 1000.00;
 
             // Bill
                 // round the total bill up to nearest cent
@@ -47,12 +46,16 @@ public class TipCalculator {
                 // reset total bill to double with cents
         totalBillPerPerson = totalBillPerPerson / 100.00;
 
-        totalBillRounded = totalBillPerPerson * numberOfPeople;
-
             // Totals
-        totalBillAndTip = totalBillRounded + totalTip;
+        totalBillAndTip = totalBill + totalTip;
 
         totalPerPerson = totalBillPerPerson + totalTipPerPerson;
 
+        // User Display
+        System.out.println();
+        System.out.println("Total Tip Amount: $" + totalTip);
+        System.out.println("Final Bill Amount (Bill + Tip): $" + totalBillAndTip);
+        System.out.println("Total Tip Per Person: $" + totalTipPerPerson);
+        System.out.print("Amount To Be Paid Per Person (Bill + Tip): $" + totalPerPerson);
     }
 }
