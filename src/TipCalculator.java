@@ -62,6 +62,7 @@ public class TipCalculator {
         System.out.println("Total Tip Amount: $" + df.format(totalTip));
         System.out.println("Final Bill Amount (Bill + Tip): $" + df.format(totalBillAndTip));
         System.out.println("Total Tip Per Person: $" + df.format(totalTipPerPerson));
+        // Amount paid per person will ALWAYS cover the final bill amount when totaled
         System.out.print("Amount To Be Paid Per Person (Bill + Tip): $" + df.format(totalPerPerson));
     }
 }
