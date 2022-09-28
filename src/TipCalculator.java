@@ -36,7 +36,23 @@ public class TipCalculator {
         totalTipPerPerson = (int)totalTipPerPerson;
                 // reset total tip to double with cents
         totalTipPerPerson = totalTipPerPerson / 100.00;
+
         totalTip = numberOfPeople * totalTipPerPerson;
+
+            // Bill
+                // round the total bill up to nearest cent
+        totalBillPerPerson = Math.ceil((totalBill / numberOfPeople) * 100);
+                // cast as an integer to remove anything after two decimals
+        totalBillPerPerson = (int)totalBillPerPerson;
+                // reset total bill to double with cents
+        totalBillPerPerson = totalBillPerPerson / 100.00;
+
+        totalBillRounded = totalBillPerPerson * numberOfPeople;
+
+            // Totals
+        totalBillAndTip = totalBillRounded + totalTip;
+
+        totalPerPerson = totalBillPerPerson + totalTipPerPerson;
 
     }
 }
