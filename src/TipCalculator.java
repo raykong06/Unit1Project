@@ -40,8 +40,6 @@ public class TipCalculator {
                 // reset total tip to double with cents
         totalTipPerPerson = totalTipPerPerson / 100.00;
 
-        totalTip = numberOfPeople * totalTipPerPerson;
-
             // Bill
                 // round the total bill up to nearest cent
         totalBillPerPerson = (totalBill / numberOfPeople) * 1000;
