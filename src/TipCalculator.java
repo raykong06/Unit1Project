@@ -57,7 +57,6 @@ public class TipCalculator {
 
         // User Display
         System.out.println();
-        // Total tip amount will ALWAYS reflect the amount of total not including the bill
         System.out.println("Total Tip Amount: $" + df.format(totalTip));
         System.out.println("Final Bill Amount (Bill + Tip): $" + df.format(totalBillAndTip));
         System.out.println("Total Tip Per Person: $" + df.format(totalTipPerPerson));
